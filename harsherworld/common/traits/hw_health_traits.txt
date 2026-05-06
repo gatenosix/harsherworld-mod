@@ -1,0 +1,324 @@
+﻿blind = {
+	category = health
+	martial = -6
+	stewardship = -2
+	intrigue = -2
+	prowess = -15 # Modified to match updated clouded eyes trait
+	health = -0.25
+
+	dread_baseline_add = -20 # Modified to match updated clouded eyes trait
+
+	attraction_opinion = -10
+
+	ruler_designer_cost = -10
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_blind_desc
+			}
+			desc = trait_blind_character_desc
+		}
+	}
+}
+
+pneumonic = {
+	opposites = {
+		ill
+	}
+
+	diplomacy = -2
+	stewardship = -2
+	martial = -2
+	intrigue = -2
+	learning = -2
+	health = -3
+	child_health = -1
+	elderly_health = -2
+	prowess_mult = -0.8
+	fertility = -0.5
+
+	category = health
+
+	dread_baseline_add = -10
+	dread_loss_mult = 1
+
+	ruler_designer_cost = 0
+
+	flag = illness
+	flag = debilitating_illness
+	flag = blocks_getting_non_epidemic_disease
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pneumonic_desc
+			}
+			desc = trait_pneumonic_character_desc
+		}
+	}
+
+	ai_energy = -50
+}
+
+ill = {
+	opposites = {
+		pneumonic
+	}
+	
+	health = -1
+	child_health = -1 # Add negative health modifier for child
+	elderly_health = -1
+	prowess = -4
+	fertility = -0.2
+
+	category = health
+
+	dread_baseline_add = -10
+	dread_loss_mult = 1
+	
+	ruler_designer_cost = 0
+
+	flag = illness
+	flag = debilitating_illness
+	flag = blocks_getting_non_epidemic_disease
+	flag = is_healthy_trigger_flag
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_ill_desc
+			}
+			desc = trait_ill_character_desc
+		}
+	}
+
+	ai_energy = -25
+}
+
+# Young children only
+sickly = {
+	maximum_age = 6
+	child_health = -2
+
+	category = health
+
+	dread_baseline_add = -20
+	dread_loss_mult = 1
+	
+	shown_in_ruler_designer = no
+
+	flag = illness
+	flag = debilitating_illness
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_sickly_desc
+			}
+			desc = trait_sickly_character_desc
+		}
+	}
+
+	ai_energy = -30
+}
+
+##						                ##
+## TIERED HEALTH TRAIT CHANGES GO BELOW ##
+##						                ##
+
+clouded_eyes = {
+	martial = -1
+	prowess = -2
+
+	flag = clouded_eyes_random_xp_gain
+	flag = age_related_ailment
+	flag = is_healthy_trigger_flag
+	flag = blind_on_max_level
+
+	category = health
+
+	ruler_designer_cost = -20
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_clouded_eyes_desc
+			}
+			desc = trait_clouded_eyes_character_desc
+		}
+	}
+
+	tracks = {
+		clouded_eyes = {
+			25 = {
+				martial = -1
+				prowess = -2
+			}
+			50 = {
+				martial = -1
+				prowess = -2
+			}
+			75 = {
+				martial = -1
+				stewardship = -1
+				intrigue = -1
+				prowess = -4
+
+				dread_baseline_add = -10
+
+				attraction_opinion = -5
+			}
+			100 = {
+				martial = -2
+				stewardship = -1
+				intrigue = -1
+				prowess = -5
+
+				health = -0.25
+
+				dread_baseline_add = -10
+
+				attraction_opinion = -5
+			}
+		}
+	}
+}
+
+faltering_heart = {
+	health = -0.1
+	prowess = -1
+	character_travel_safety = -2
+	stress_gain_mult = 0.2
+	stress_loss_mult = -0.2
+
+	flag = faltering_heart_random_xp_gain
+	flag = age_related_ailment
+	flag = is_healthy_trigger_flag
+	flag = death_on_max_level
+
+	category = health
+
+	ruler_designer_cost = -20
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_faltering_heart_desc
+			}
+			desc = trait_faltering_heart_character_desc
+		}
+	}
+
+	tracks = {
+		faltering_heart = {
+			25 = {
+				health = -0.4
+				prowess = -2
+				character_travel_safety = -2
+				stress_gain_mult = 0.2
+				stress_loss_mult = -0.2
+			}
+			50 = {
+				health = -0.5
+				prowess = -2
+				martial = -2
+				character_travel_safety = -2
+				stress_gain_mult = 0.2
+				stress_loss_mult = -0.2
+			}
+			75 = {
+				health = -1
+				prowess = -3
+				martial = -2
+				stewardship = -4
+				character_travel_safety = -2
+				stress_gain_mult = 0.2
+				stress_loss_mult = -0.2
+			}
+			100 = {
+				health = -100
+			}
+		}
+	}
+}
+
+fragile_bones = {
+	character_travel_speed_mult = -0.1
+	prowess_mult = -0.1
+	advantage = -3
+	life_expectancy = -3
+	enemy_hostile_scheme_success_chance_max_add = 5
+
+	flag = fragile_bones_random_xp_gain
+	flag = age_related_ailment
+	flag = is_healthy_trigger_flag
+	flag = wounds_twice_as_bad
+
+	category = health
+
+	ruler_designer_cost = -20
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_fragile_bones_desc
+			}
+			desc = trait_fragile_bones_character_desc
+		}
+	}
+
+	tracks = {
+		fragile_bones = {
+			25 = {
+				character_travel_speed_mult = -0.1
+				prowess_mult = -0.1
+				advantage = -3
+				life_expectancy = -3
+				enemy_hostile_scheme_success_chance_max_add = 10
+			}
+			50 = {
+				character_travel_speed_mult = -0.1
+				prowess_mult = -0.1
+				advantage = -3
+				life_expectancy = -3
+				enemy_hostile_scheme_success_chance_max_add = 10
+			}
+			75 = {
+				character_travel_speed_mult = -0.1
+				prowess_mult = -0.2 # doubled
+				advantage = -5
+				life_expectancy = -5
+				enemy_hostile_scheme_success_chance_max_add = 15
+			}
+			100 = {
+				character_travel_speed_mult = -0.1
+				prowess_mult = -0.2 # doubled
+				advantage = -10
+				life_expectancy = -10
+				enemy_hostile_scheme_success_chance_max_add = 15
+			}
+		}
+	}
+}

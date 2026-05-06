@@ -1,0 +1,88 @@
+# Chance for children to get sick each year
+
+random_yearly_everyone_pulse {
+    on_actions = {
+        hw_child_ill_pulse
+    }
+}
+
+hw_child_ill_pulse = {
+    trigger = {
+        is_child = yes
+        NOT = { has_trait = ill }
+        NOT = { has_trait = pneumonic }
+        NOT = { age > 10 }
+    }
+
+    random_events = {
+        chance_to_happen = 60
+
+        # If the above check succeeds, the below will determine if no event happens anyway
+        chance_of_no_event = {
+            value = 0
+
+            if = {
+                limit = {
+                    age <=2
+                }
+
+                add = 10
+            }
+
+            else_if = {
+                limit = {
+                    age <=4
+                }
+
+                add = 15
+            }
+
+            else_if = {
+                limit = {
+                    age = 5
+                }
+
+                add = 20
+            }
+
+            else_if = {
+                limit = {
+                    age = 6
+                }
+
+                add = 25
+            }
+
+            else_if = {
+                limit = {
+                    age = 7
+                }
+
+                add = 30
+            }
+
+            else_if = {
+                limit = {
+                    age = 8
+                }
+
+                add = 35
+            }
+
+            else_if = {
+                limit = {
+                    age = 9
+                }
+
+                add = 40
+            }
+
+            else {
+                add = 50
+            }
+        }
+
+        200 = health.1001 # Ill trait
+        50 = health.1002 # Pneumonia trait
+    }
+}
