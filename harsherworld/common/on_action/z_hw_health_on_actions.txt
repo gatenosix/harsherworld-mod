@@ -1,0 +1,19 @@
+#OUTBREAK
+#Randomly getting a disease (not contagion, that is handled by effects applying disease)
+
+disease_outbreak_pulse = {
+	random_events = {
+		chance_to_happen = 10
+
+		chance_of_no_event = harsher_outbreak_pulse_chance_of_no_event
+
+		4000 = health.1001 	#Ill
+		80 = health.1002  	#Pneumonic, x35 as common when ill
+		250 = health.1003 	#Gout-ridden
+		40 = health.1004  	#Leprosy
+		100 = health.1006 	#Consumption
+		150 = health.1007 	#Cancer
+		75 = health.1008 	#Lover's Pox
+		25 = health.1009 	#Great pox
+	}
+}
