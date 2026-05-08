@@ -898,6 +898,7 @@ pregnancy.2050 = {
 
 	trigger = {
 		# If we are married and/or have concubines, but all of them are women as well, it's a bastard!
+		any_consort = { } # count = all returns true if list is empty! (1.19.0.5)
 		any_consort = {
 			is_female = yes
 			count = all
