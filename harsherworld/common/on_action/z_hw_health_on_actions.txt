@@ -3,7 +3,7 @@
 
 disease_outbreak_pulse = {
 	random_events = {
-		chance_to_happen = 10
+		chance_to_happen = 30 # was 10
 
 		chance_of_no_event = harsher_outbreak_pulse_chance_of_no_event
 

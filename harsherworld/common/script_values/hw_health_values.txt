@@ -5,13 +5,13 @@
 		limit = {
 			has_perk = wash_your_hands_perk
 		}
-		add = 40
+		add = 20 # was 40
 	}
 	else_if = {
 		limit = {
 			host ?= { has_perk = wash_your_hands_perk }
 		}
-		add = 20
+		add = 10 # was 20
 	}
 	if = { #Wet Nurse reduces chance of sickness for children
 		limit = {
@@ -31,7 +31,7 @@
 			}
 			root = { is_adult = no }
 		}
-		add = 25
+		add = 15 # was 25
 	}
 	if = { # Difficulty
 		limit = {
