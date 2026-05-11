@@ -175,13 +175,13 @@
 		limit = {
 			has_character_modifier = isolating_modifier
 		}
-		multiply = 0.25 #75% less likely
+		multiply = 0.75 #was 0.25 for 75% less likely
 	}
 	if = {
 		limit = {
 			has_character_modifier = hiding_from_epidemic
 		}
-		multiply = 0.25 #75% less likely
+		multiply = 0.75 #was 0.25 for 75% less likely
 	}
 	min = 1 # Never totally immune
 }
