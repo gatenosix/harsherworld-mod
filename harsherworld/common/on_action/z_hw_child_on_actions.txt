@@ -11,7 +11,7 @@ hw_child_ill_pulse = {
         is_child = yes
         NOT = { has_trait = ill }
         NOT = { has_trait = pneumonic }
-        NOT = { age > 10 }
+        NOT = { age > 11 }
     }
 
     random_events = {
@@ -50,7 +50,7 @@ hw_child_ill_pulse = {
                     age = 6
                 }
 
-                add = 25
+                add = 30
             }
 
             else_if = {
@@ -58,7 +58,7 @@ hw_child_ill_pulse = {
                     age = 7
                 }
 
-                add = 30
+                add = 35
             }
 
             else_if = {
@@ -66,7 +66,7 @@ hw_child_ill_pulse = {
                     age = 8
                 }
 
-                add = 35
+                add = 45
             }
 
             else_if = {
@@ -74,11 +74,27 @@ hw_child_ill_pulse = {
                     age = 9
                 }
 
-                add = 40
+                add = 55
+            }
+
+            else_if = {
+                limit = {
+                    age = 10
+                }
+
+                add = 65
             }
 
             else {
-                add = 50
+                add = 75
+            }
+
+            if = {
+                limit = {
+                    has_trait = sickly
+                }
+
+                multiply = 0.7
             }
         }
 
