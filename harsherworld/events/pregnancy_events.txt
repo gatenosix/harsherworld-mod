@@ -26,18 +26,39 @@ pregnancy.0001 = {
 
 				#More kids means less risk of complications!
 				modifier = {
-					add = 50 #20
+					add = 20
 					any_child = {
 						even_if_dead = yes
 						count >= 2
 					}
 				}
 				modifier = {
-					add = 100 #50
+					add = 100
 					any_child = {
 						even_if_dead = yes
 						count >= 4
 					}
+				}
+
+				#Trait modifiers (hwmod)
+				modifier = {
+					add = 30
+					has_trait = fecund
+				}
+
+				modifier = {
+					add = -20
+					has_trait = physique_bad_1 #delicate
+				}
+
+				modifier = {
+					add = -30
+					has_trait = physique_bad_2 #frail
+				}
+
+				modifier = {
+					add = -50
+					has_trait = physique_bad_3 #feeble
 				}
 
 				#More likely if you have sacred childbirth
