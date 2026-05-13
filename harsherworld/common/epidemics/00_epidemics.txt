@@ -196,7 +196,7 @@ smallpox = {
 				value = spread_chance_epidemics_default_value
 				multiply = spread_chance_epidemics_mult_value
 			}
-			max_provinces = { 30 55 }
+			max_provinces = { 5 12 }
 
 			infection_duration = {
 				months = { 6 8 }
@@ -274,7 +274,7 @@ smallpox = {
 				value = spread_chance_epidemics_default_value
 				multiply = spread_chance_epidemics_mult_value
 			}
-			max_provinces = { 220 325 }
+			max_provinces = { 220 350 }
 
 			infection_duration = {
 				months = { 22 40 }
@@ -1026,7 +1026,7 @@ typhus = {
 				value = spread_chance_epidemics_default_value
 				multiply = spread_chance_epidemics_mult_value
 			}
-			max_provinces = { 30 55 }
+			max_provinces = { 5 12 }
 
 			infection_duration = {
 				months = { 6 12 }
@@ -1408,7 +1408,7 @@ consumption = { #Tuberculosis
 				value = spread_chance_epidemics_default_value
 				multiply = spread_chance_epidemics_mult_value
 			}
-			max_provinces = { 30 55 }
+			max_provinces = { 5 12 }
 
 			infection_duration = {
 				months = { 12 18 } #stays around for a long time
@@ -1799,7 +1799,7 @@ measles = {
 				value = spread_chance_epidemics_default_value
 				multiply = spread_chance_epidemics_mult_value
 			}
-			max_provinces = { 55 75 }
+			max_provinces = { 10 24 }
 
 			infection_duration = {
 				months = { 3 6 }
@@ -1897,7 +1897,7 @@ measles = {
 				value = spread_chance_epidemics_default_value
 				multiply = spread_chance_epidemics_mult_value
 			}
-			max_provinces = { 270 405 }
+			max_provinces = { 270 425 }
 
 			infection_duration = {
 				months = { 12 24 }
@@ -2158,7 +2158,7 @@ dysentery = {
 				multiply = spread_chance_epidemics_mult_value
 			}
 
-			max_provinces = { 20 30 }
+			max_provinces = { 5 8 }
 			
 			infection_duration = {
 				months = { 2 4 }
@@ -2548,7 +2548,7 @@ ergotism = { #dancing plague - not contagious
 				}
 			}
 
-			max_provinces = { 20 30 }
+			max_provinces = { 2 6 }
 
 			infection_duration = {
 				months = { 6 12 }
@@ -2606,7 +2606,7 @@ ergotism = { #dancing plague - not contagious
 				}
 			}
 
-			max_provinces = { 45 65 }
+			max_provinces = { 22 32 }
 
 			infection_duration = {
 				months = { 12 18 }
@@ -2664,7 +2664,7 @@ ergotism = { #dancing plague - not contagious
 				}
 			}
 
-			max_provinces = { 85 90 }
+			max_provinces = { 63 81 }
 
 			infection_duration = {
 				months = { 24 30 }
