@@ -3,7 +3,7 @@
 
 disease_outbreak_pulse = {
 	random_events = {
-		chance_to_happen = 30 # was 10
+		chance_to_happen = 30
 
 		chance_of_no_event = harsher_outbreak_pulse_chance_of_no_event
 
@@ -15,5 +15,21 @@ disease_outbreak_pulse = {
 		150 = health.1007 	#Cancer
 		75 = health.1008 	#Lover's Pox
 		25 = health.1009 	#Great pox
+	}
+}
+
+wounded_recovery_pulse = {
+	trigger = {
+		OR = {
+			has_trait = wounded
+			has_infected_or_gangrenous_wound_trigger = yes
+		}
+	}
+	random_events = {
+		400 = 0
+		325 = health.0001 #Recover from Wounded
+		200 = health.0002 #Recover from Severely Wounded
+		100 = health.0003 #Recover from Near Death
+		150 = health.0004 #Infected wound is no longer infected
 	}
 }
