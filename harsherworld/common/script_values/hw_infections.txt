@@ -262,5 +262,3 @@ character_infection_chance_harsher = {
 	}
 	min = 1 # Never totally immune
 }
-
-# Following social distancing modifiers have been removed (hw mod)
