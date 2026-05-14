@@ -1,4 +1,81 @@
-﻿character_infection_chance_harsher = {
+﻿would_follow_social_distancing_value = {
+	value = -1 #let's assume medieval people wouldn't by default
+	if = {
+		limit = { has_perk = wash_your_hands_perk }
+		add = 5
+	}
+	if = {
+		limit = { has_trait = shy }
+		add = 1
+	}
+	if = {
+		limit = { has_trait = paranoid }
+		add = 2
+	}
+	if = {
+		limit = { has_trait = reclusive }
+		add = 4
+	}
+	if = {
+		limit = { has_trait = shrewd }
+		add = 1
+	}	
+	if = {
+		limit = { has_trait = lifestyle_physician }
+		add = 4
+	}
+	if = {
+		limit = { has_trait = lifestyle_herbalist }
+		add = 2
+	}
+	if = {
+		limit = { has_trait = diligent }
+		add = 1
+	}
+	if = {
+		limit = { has_trait = craven }
+		add = 1
+	}
+	if = {
+		limit = { has_trait = temperate }
+		add = 1
+	}
+	if = {
+		limit = { has_trait = arbitrary }
+		add = -1
+	}
+	if = {
+		limit = { has_trait = brave }
+		add = -1
+	}
+	if = {
+		limit = { has_trait = impatient }
+		add = -2
+	}
+	if = {
+		limit = { has_trait = gregarious }
+		add = -4
+	}
+	if = {
+		limit = { has_trait = dull }
+		add = -2
+	}
+	#Would your culture be touchy?/take this seriously
+	if = {
+		limit = { culture = { has_cultural_tradition = tradition_fp2_ritualised_friendship } }
+		add = -1
+	}
+	if = {
+		limit = { culture = { has_cultural_tradition = tradition_life_is_just_a_joke } }
+		add = -1
+	}
+	if = {
+		limit = { culture = { has_cultural_parameter = better_disease_resistance } }
+		add = 10
+	}
+}
+
+character_infection_chance_harsher = {
 	value = 40 # changed from 10
 	#If you're already sick/weak you're screwed
 	if = {
