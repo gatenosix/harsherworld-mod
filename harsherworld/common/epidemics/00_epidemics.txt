@@ -196,7 +196,7 @@ smallpox = {
 				value = spread_chance_epidemics_default_value
 				multiply = spread_chance_epidemics_mult_value
 			}
-			max_provinces = { 5 12 }
+			max_provinces = { 7 16 }
 
 			infection_duration = {
 				months = { 6 8 }
@@ -235,7 +235,7 @@ smallpox = {
 				value = spread_chance_epidemics_default_value
 				multiply = spread_chance_epidemics_mult_value
 			}
-			max_provinces = { 85 130 }
+			max_provinces = { 100 145 }
 
 			infection_duration = {
 				months = { 10 20 }
@@ -1848,7 +1848,7 @@ measles = {
 				value = spread_chance_epidemics_default_value
 				multiply = spread_chance_epidemics_mult_value
 			}
-			max_provinces = { 130 180 }
+			max_provinces = { 150 200 }
 
 			infection_duration = {
 				months = { 6 12 }
@@ -1897,7 +1897,7 @@ measles = {
 				value = spread_chance_epidemics_default_value
 				multiply = spread_chance_epidemics_mult_value
 			}
-			max_provinces = { 270 425 }
+			max_provinces = { 290 450 }
 
 			infection_duration = {
 				months = { 12 24 }
@@ -2158,7 +2158,7 @@ dysentery = {
 				multiply = spread_chance_epidemics_mult_value
 			}
 
-			max_provinces = { 5 8 }
+			max_provinces = { 5 12 }
 			
 			infection_duration = {
 				months = { 2 4 }
