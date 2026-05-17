@@ -3,6 +3,7 @@
 random_yearly_everyone_pulse {
     on_actions = {
         hw_child_ill_pulse
+        hw_smallpox_pulse
     }
 }
 
@@ -102,3 +103,36 @@ hw_child_ill_pulse = {
         50 = health.1002 # Pneumonia trait
     }
 }
+
+hw_smallpox_pulse = { # PROBLEM: Seems to run fine from the 'run' debug command, but when trying as part of the mod as an on_action, it does not.
+	if = {
+		limit = {
+			location ?= {
+				any_province_epidemic = {
+					epidemic_type = epidemic_type:smallpox
+					count > 0
+				}
+			}
+		}
+	}
+	
+	trigger_event = {
+		id = health.1006
+	}
+}
+
+# FROM $HOME/.steam/root/steamapps/compatdata/1158310/pfx/drive_c/users/steamuser/Documents/Paradox Interactive/Crusader Kings III/run/ - THIS RUNS FINE:
+#if = {
+	#limit = {
+		#location ?= {
+			#any_province_epidemic = {
+				#epidemic_type = epidemic_type:smallpox
+				#count > 0
+			#}
+		#}
+	#}
+
+	#trigger_event = {
+		#id = health.1006
+	#}
+#}
